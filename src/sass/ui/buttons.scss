@@ -22,6 +22,22 @@
     }
 }
 
+.btn-submit {
+    @include button;
+
+    font-size: 16px;
+    color: $light;
+    border: 1px solid $light;
+    border-radius: 2px;
+    width: 90px;
+    height: 40px;
+
+    &:focus {
+        outline: 1px solid $ui-disabled;
+        border: 1px solid $ui-disabled;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .btn-default {
         &:hover {
