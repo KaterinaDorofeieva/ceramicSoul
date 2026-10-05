@@ -1,47 +1,38 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import "/src/sass/style.scss";
 
+try {
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.icon-right-open',
+            prevEl: '.icon-left-open',
+        },
+        breakpoints: {
+            // when window width is >= 1200px
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 5,
+            },
+            1920: {
+                spaceBetween: 35,
+                slidesPerView: 3, // вот тут
+            },
+        },
 
+        modules: [Navigation, Pagination],
+    });
+} catch (e) { }
 
-let text = "Hello world";
-text = "this is a text";
-const pi = 3.14;
-const isOpen = false
-console.log(text);
-
-
-const object = {
-    name: "Kate",
-    age: 24,
-}; // настройки описание человека, чего-то
-
-const titles = [
-    "Make your dream come true or decorate your home",
-    "create or buy",
-    5
-];
-
-console.log(object.age);
-console.log(titles[1]);
-
-console.log(text);
-
-function calc(a, b) {
-    console.log(a + b);
-
-}
-calc(2, 5);
-
-if (isOpen) {
-    console.log("Shop is open");
-} else {
-    console.log("Shop is close");
-}
-
-const vase = document.querySelector('.touch__decor');
-console.log(vase);
-
-vase.addEventListener('click', () => {
-    console.log(vase);
-})
 
