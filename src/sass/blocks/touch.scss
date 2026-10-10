@@ -107,11 +107,12 @@
         &__decor {
             display: block;
             position: absolute;
-            bottom: 0;
             right: 0;
+            bottom: 0;
         }
     }
 }
+
 
 @media screen and (min-width: 1200px) {
     .touch {
@@ -123,7 +124,13 @@
             box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
         }
 
+        &__textarea {
+            width: 300px;
+        }
+
         &__input {
+            width: 300px;
+
             &:hover {
                 border: none;
                 outline: 1px solid $dark;
@@ -145,9 +152,9 @@
             height: 356px;
         }
 
-        &__form {
+        form {
             width: auto;
-            padding-left: 143px;
+            margin-left: 143px;
         }
 
         &__fieldset {

@@ -3,6 +3,10 @@
 @use "/src/sass/blocks/touch.scss" as *;
 
 .footer {
+    &__space {
+        margin-top: 90px;
+    }
+
     margin-top: 90px;
     padding-top: 50px;
     background-color: $dark;
@@ -24,6 +28,7 @@
 
     &__form {
         margin-top: 40px;
+        width: 293px;
     }
 
     &__input {
@@ -43,6 +48,7 @@
 
     &__label {
         color: $light;
+        background-color: $dark;
     }
 
     &__btn {
@@ -71,6 +77,11 @@
 
                 list-style-type: none;
                 margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: $light;
+                }
             }
         }
     }
@@ -96,6 +107,10 @@
 
             span {
                 font-size: 26px;
+
+                &:before {
+                    margin: 0;
+                }
             }
         }
     }
@@ -103,5 +118,54 @@
     &__copyright {
         text-align: center;
         margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__newsletter {
+            width: 100%;
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__newsletter {
+            width: auto;
+        }
+
+        &__copyright {
+            margin-top: 50px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .footer {
+        padding: 80px 0 50px 0;
+
+        &__space {
+            margin-top: 100px;
+        }
+
+        &__copyright {
+            margin-top: 18px;
+        }
+
     }
 }
